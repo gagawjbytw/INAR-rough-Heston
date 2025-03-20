@@ -1,0 +1,20 @@
+# Example configuration for INAR(∞) Monte Carlo simulation
+# These parameters match those used in the paper
+
+# Simulation parameters
+number_of_simulations = 100000
+number_of_time_steps = 1000
+
+# Model parameters
+alpha = 0.62              # Hurst parameter
+gamma = 0.1               # Scaling parameter
+beta = 27.558            # Asymmetry parameter
+mu = 26.859152          # Base intensity
+theta = 0.3156          # Volatility scaling
+xi = 0.1242             # Intensity adjustment
+S0 = 100.0              # Initial stock price
+
+# Option parameters
+strike_min = 80.0
+strike_max = 120.0
+strike_step = 5.0 
