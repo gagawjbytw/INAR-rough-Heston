@@ -1,6 +1,6 @@
 # INAR-rough-Heston
 
-Monte Carlo simulation implementation for pricing European options under the INAR(∞) framework, as described in our paper "Rough Heston Models as the scaling limit of bivariate heavy-tailed nearly unstable cumulative INAR(∞) processes".
+Monte Carlo simulation implementation for pricing European/Asian/Lookback/Barrier options under the INAR(∞) framework, as described in our paper "Rough Heston Models as the scaling limit of bivariate heavy-tailed nearly unstable cumulative INAR(∞) processes".
 
 ## Overview
 
