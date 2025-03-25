@@ -1,20 +1,25 @@
-# Example configuration for INAR(∞) Monte Carlo simulation
-# These parameters match those used in the paper
+# Monte Carlo Parameters
+n_sims = 100000          # Number of simulation paths
+base_seed = 100000       # Random number seed
 
-# Simulation parameters
-number_of_simulations = 100000
-number_of_time_steps = 1000
+# Option Basic Parameters
+S0 = 100                 # Initial stock price
+T_steps = 250           # Number of time steps
+r = 0                   # Risk-free rate
 
-# Model parameters
-alpha = 0.62              # Hurst parameter
-gamma = 0.1               # Scaling parameter
-beta = 27.558            # Asymmetry parameter
-mu = 26.859152          # Base intensity
-theta = 0.3156          # Volatility scaling
-xi = 0.1242             # Intensity adjustment
-S0 = 100.0              # Initial stock price
+# Strike Price Range
+strike_min = 80         # Minimum strike price
+strike_max = 120        # Maximum strike price
+strike_step = 10        # Strike price increment
 
-# Option parameters
-strike_min = 80.0
-strike_max = 120.0
-strike_step = 5.0 
+# Barrier Option Parameters
+barrier_up = 110.0      # Up-and-in barrier level
+barrier_down = 90.0     # Down-and-out barrier level
+
+# INAR-Rough-Heston Model Parameters
+alpha = 0.62            # Roughness parameter
+gamma = 0.1             # Gamma parameter
+theta = 0.3156         # Theta parameter
+rho = -0.681           # Correlation coefficient
+nu = 0.331             # Volatility parameter
+V0 = 0.0392            # Initial variance 
