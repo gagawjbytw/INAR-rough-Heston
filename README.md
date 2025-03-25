@@ -26,14 +26,14 @@ INAR-rough-Heston/
 ### Windows
 ```bash
 # Using the provided batch script
-scripts/build_and_run.bat
+scripts/rough_INAR.bat
 ```
 
 ### Linux/macOS
 ```bash
 # Using the provided shell script
 chmod +x scripts/build_and_run.sh
-./scripts/build_and_run.sh
+./scripts/rough_INAR.sh
 ```
 
 ## Features
