@@ -63,16 +63,16 @@ If you use this code in your research, please cite our paper:
 ```bibtex
 @article{cai2024scaling,
   title={Scaling limit of heavy tailed nearly unstable cumulative INAR ($$\backslash$infty $) processes and rough fractional diffusions},
-  author={Cai, Chunhao and He, Ping and Wang, Qing-Hua and Wang, Yingli},
+  author={Wang, Yingli and Cai, Chunhao and He, Ping and Wang, QingHua},
   journal={arXiv preprint arXiv:2403.11773},
   year={2024}
 }
 
-@article{wang2024rough,
+@article{wang2025rough,
   title={Rough Heston Models as the scaling limit of bivariate heavy-tailed nearly unstable cumulative INAR($\infty$) processes},
-  author={Wang, Yingli and Cui, Zhenyu},
+  author={Wang, Yingli and Cui, Zhenyu and Zhu, Lingjiong},
   journal={arXiv preprint arXiv:2503.18259},
-  year={2024}
+  year={2025}
 }
 ```
 
