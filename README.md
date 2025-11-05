@@ -63,7 +63,7 @@ If you use this code in your research, please cite our paper:
 ```bibtex
 @article{cai2024scaling,
   title={Scaling limit of heavy tailed nearly unstable cumulative INAR ($$\backslash$infty $) processes and rough fractional diffusions},
-  author={Wang, Yingli and Cai, Chunhao and He, Ping and Wang, QingHua},
+  author={Wang, Yingli and Cai, Chunhao and He, Ping and Wang, Qinghua},
   journal={arXiv preprint arXiv:2403.11773},
   year={2024}
 }
