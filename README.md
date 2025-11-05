@@ -64,7 +64,7 @@ If you use this code in your research, please cite our paper:
 }
 
 @article{wang2025rough,
-  title={Rough Heston Models as the scaling limit of bivariate heavy-tailed nearly unstable cumulative INAR($\infty$) processes},
+  title={Rough Heston model as the scaling limit of bivariate cumulative heavy-tailed INAR processes: Weak-error bounds and option pricing},
   author={Wang, Yingli and Cui, Zhenyu and Zhu, Lingjiong},
   journal={arXiv preprint arXiv:2503.18259},
   year={2025}
