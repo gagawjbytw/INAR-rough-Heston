@@ -23,17 +23,12 @@ INAR-rough-Heston/
 
 ## Building and Running
 
-### Windows
-```bash
-# Using the provided batch script
-scripts/rough_INAR.bat
-```
 
 ### Linux/macOS
 ```bash
 # Using the provided shell script
-chmod +x scripts/build_and_run.sh
-./scripts/rough_INAR.sh
+chmod +x scripts/run_inar_all_options.sh
+./scripts/run_inar_all_options.sh
 ```
 
 ## Features
