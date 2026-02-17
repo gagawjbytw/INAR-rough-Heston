@@ -56,7 +56,7 @@ The simulation is optimized for modern processors and includes features like:
 If you use this code in your research, please cite our paper:
 
 ```bibtex
-@article{cai2026scaling,
+@article{wang2026scaling,
   title   = {Scaling limit of heavy-tailed nearly unstable cumulative INAR($\infty$) processes and rough fractional diffusions},
   author  = {Cai, Chunhao and He, Ping and Wang, Qinghua and Wang, Yingli},
   journal = {Methodology and Computing in Applied Probability},
