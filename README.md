@@ -1,21 +1,19 @@
 # Reproducible code for the INAR--rough-Heston manuscript
 
-This directory contains the code needed for the numerical results in the
-latest manuscript.  The original source tree is left unchanged.  The three
-subdirectories separate the experiments by output type:
+This repository contains the code needed for the numerical results in the
+latest manuscript.  The three top-level directories separate the experiments
+by output type:
 
 ```text
-code-revised/
 ├── INAR-tables/   INAR simulation, European/path-dependent tables, and checks
 ├── IV-slices/     multi-alpha implied-volatility slices and Table 2
 └── IV-surface/    implied-volatility surface and ATM-skew figures
 ```
 
 The C++ programs use only the C++17 standard library and POSIX threads.  The
-Python scripts require Python 3 with `numpy`, `pandas`, and `matplotlib`;
-`jupyter` is additionally needed for `assump_verify.ipynb`.
+Python scripts require Python 3 with `numpy`, `pandas`, and `matplotlib`.
 
-All commands below assume that they are run from the indicated subdirectory.
+Each command block below is intended to be started from the repository root.
 Use `g++` instead of `clang++` if preferred.
 
 ## 1. INAR tables
@@ -25,26 +23,29 @@ driver includes that file and writes the tau-convergence, alpha-one European,
 and alpha-one path-dependent CSV files.
 
 ```sh
-cd code-revised/INAR-tables
+cd INAR-tables
 clang++ -O3 -std=c++17 -pthread rerun_inar_tables.cpp -o rerun_inar_tables
 ./rerun_inar_tables \
   --paths 500000 \
-  --output-dir ../../reruns/reproduced_inar_tables
+  --output-dir ../reruns/reproduced_inar_tables
 ```
 
 The classical Heston Euler benchmark used for the path-dependent comparison
 is run separately:
 
 ```sh
+cd INAR-tables
 clang++ -O3 -std=c++17 -pthread classic_Heston_EM.cpp -o classic_Heston_EM
 ./classic_Heston_EM
 ```
 
-The finite-`tau` transform and bounded-strip checks can be inspected or
-executed with:
+The sampled continuous-Riccati and finite-`tau` transform-strip diagnostics
+used in the manuscript can be reproduced with:
 
 ```sh
-python3 -m jupyter notebook assump_verify.ipynb
+cd INAR-tables
+python3 verify_transform_strip.py \
+  --output transform_strip_diagnostics.csv
 ```
 
 The table driver uses the machine's available worker count.  The manuscript
@@ -63,8 +64,8 @@ Integrated, INAR-CDQ-FFT, iVi, and HQE methods.  The following command
 recreates the four-panel paper-style experiment with the manuscript settings:
 
 ```sh
-cd code-revised/IV-slices
-OUT=../../reruns/reproduced_iv_slices
+cd IV-slices
+OUT=../reruns/reproduced_iv_slices
 mkdir -p "$OUT"
 
 python3 run_smile_overlay_multi_alpha.py \
@@ -98,14 +99,14 @@ The surface generator reuses the INAR core through the relative include
 classical models:
 
 ```sh
-cd code-revised/IV-surface
+cd IV-surface
 ./run_iv_surface_pipeline.sh
 ```
 
 To write the output to a separate directory, override `IV_OUTDIR`:
 
 ```sh
-IV_OUTDIR=../../reruns/reproduced_iv_surface \
+IV_OUTDIR=../reruns/reproduced_iv_surface \
 IV_COMPILER=clang++ \
 IV_PYTHON=python3 \
 ./run_iv_surface_pipeline.sh
